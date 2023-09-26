@@ -6,6 +6,7 @@
 
 body {
     background-color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -62,11 +63,13 @@ body {
     background: rgba(255, 255, 255, 0.10);
     color: var(--neutral-100, #F0F3FD);
     font-family: Lexend;
+    max-height: 34px;
     font-size: 14px;
     font-style: normal;
+    line-height: 0;
     font-weight: 600;
     text-transform: capitalize;
-    padding: 6px 16px;
+    padding: 8px 16px;
 }
 
 .header__navbar__signup-btn {
@@ -97,17 +100,18 @@ body {
 }
 
 .header__lines {
-    width: 500px;
-    height: 290px;
+    width: 425px;
+    height: 310px;
     position: absolute;
-    top: 120px;
-    right: 80px;
+    top: 125px;
+    right: 190px;
 }
 
 .header__bg-image {
     border-radius: 0px 0px 0px 80px;
-    /* max-height: 100vh; */
+    max-height: 100vh;
     width: 720px;
+    height: 100vh;
 }
 
 .dreams {
@@ -141,25 +145,137 @@ body {
     opacity: 0.75;
 }
 
-.dreams__search-bar {
-    height: 80px;
-    border-radius: 32px;
-        border: 1px solid var(--neutral-300, #E0E3EB);
-        background: #FFF;
+.dreams__search-container {
+    margin-top: 32px;
 }
 
-.dreams__search-form input {
+.dreams__search-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 24px;
+    padding-right: 4px;
+    height: 56px;
+    width: 486px;
+    border-radius: 32px;
+    border: 1px solid var(--neutral-300, #E0E3EB);
+    background: #FFF;
+}
+
+.dreams__search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+#dreams__search-input {
     height: 50px;
+    flex-grow: 1;
+    border: none;
+}
+
+#dreams__search-input:focus {
+    outline: none;
 }
 
 .dreams__search-button {
     border-radius: 32px;
     background: var(--green-500, #10B981);
+    border: none;
     color: #FFF;
     font-family: Lexend;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
     line-height: 22px;
-        /* 157.143% */
+    height: 48px;
+    width: 109px;
+    cursor: pointer;
+}
+
+.dreams__partnership {
+    margin-top: 32px;
+}
+
+.dreams__partnership-text {
+    color: var(--neutral-500, #888B97);
+    font-family: Lexend;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: capitalize;
+        /* 200% */
+}
+
+.dreams__partnership__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;  
+    list-style-type: none;
+}
+
+.dreams__partnership__item {
+    height: 64px;
+}
+
+.header__cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 -200px 48px 48px;
+}
+
+.header__card {
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    background: #fff;
+    max-height: 104px;
+    padding: 24px;
+}
+
+.header__card__icon {
+    width: 56px;
+    height: 56px;
+}
+
+.header__card__info {
+    margin-left: 16px;
+}
+
+.header__card__bold-text {
+    color: var(--mrt-app-headline, #1B1C57);
+    font-family: Lexend;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.header__card__text {
+    color: var(--mrt-app-subheadline, #68799F);
+    font-family: Lexend;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.header__card__icon-face {
+    position: relative;
+    margin-right: -28px;
+    border-radius: 56px;
+    border: 3px solid #FFF;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+    box-shadow: 0px 9px 32px 0px rgba(89, 92, 219, 0.10);
+}
+
+.face-last {
+    margin: 0;
+}
+
+.header__card__house {
+    border-radius: 24px;
+    background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
